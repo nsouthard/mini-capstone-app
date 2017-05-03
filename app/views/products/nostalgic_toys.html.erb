@@ -1,5 +1,10 @@
 <h1>Popular Toys from the 80's</h1>
-<h2>Toy: <% @product.name %></h2>
-<h2>Price: <% @product.price %></h2>
-<h2>Image: <% @product.image %></h2>
-<h2>Description: <% @product.description %></h2>
+
+<% @products.each do |product| %>
+
+<h2>Toy: <%= product.name %></h2>
+<h2>Price: <%= product.price %></h2>
+<h2>Image: <%= product.image %></h2>
+<h2>Description: <%= product.description %></h2>
+
+<% end %>
