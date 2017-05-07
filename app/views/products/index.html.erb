@@ -2,9 +2,9 @@
 
 <% @products.each do |product| %>
 
-<h2>Toy: <%= product.name %></h2>
+<h2><a href="/products/<%= product.id %>">Toy: <%= product.name %></a></h2>
 <h2>Price: <%= product.price %></h2>
-<h2>Image: <%= product.image %></h2>
+<img src= <%= product.image %>
 <h2>Description: <%= product.description %></h2>
 
 <% end %>
