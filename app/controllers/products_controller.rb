@@ -20,6 +20,8 @@ class ProductsController < ApplicationController
                           description: params[:description]
                           )
     product.save
+    flash[:success] = "Toy Successfully Created"
+    redirect_to "/products/#{product.id}" #redirects to show action
   end
 
   def edit
@@ -35,6 +37,15 @@ class ProductsController < ApplicationController
                               description: params[:description]
                               )
     product.save
+    flash[:success] = "Toy Successfully Updated"
+    redirect_to "/products/#{product.id}" #redirects to show action
+  end
+
+  def destroy
+    product = Product.find(params[:id])
+    product.destroy
+    flash[:warning] = "Toy Successfully Destroyed"
+    redirect_to "/" #redirects to home page
   end
 
 end

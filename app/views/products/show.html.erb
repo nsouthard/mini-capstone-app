@@ -5,6 +5,8 @@
 <h2>Description: <%= @product.description %></h2>
 
 <a href="/products/<%= @product.id %>/edit">Edit Toys</a>
+<%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
+
 
 
 
