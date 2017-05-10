@@ -1,8 +1,13 @@
 
 <h2>Toy: <%= @product.name %></h2>
+<h2><%= @product.sale_message %></h2>
 <h2>Price: <%= @product.price %></h2>
-<img src= <%= @product.image %>
+<h2>Tax: <%= @product.tax %></h2>
+<h2>Total Cost: <%= @product.total_cost %></h2>
+<img src= <%= @product.image %>>
 <h2>Description: <%= @product.description %></h2>
+<h5>Last Update:<%= @product.friendly_updated_at %></h5>
+
 
 <a href="/products/<%= @product.id %>/edit">Edit Toys</a>
 <%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
