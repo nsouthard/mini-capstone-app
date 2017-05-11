@@ -1,9 +1,9 @@
 
 <h2>Toy: <%= @product.name %></h2>
 <h2><%= @product.sale_message %></h2>
-<h2>Price: <%= @product.price %></h2>
-<h2>Tax: <%= @product.tax %></h2>
-<h2>Total Cost: <%= @product.total_cost %></h2>
+<h2 class="<%= "red-price" if @product.discounted? %>">Price: <%= number_to_currency(@product.price) %></h2>
+<h2>Tax: <%= number_to_currency(@product.tax) %></h2>
+<h2>Total Cost: <%= number_to_currency(@product.total_cost) %></h2>
 <img src= <%= @product.image %>>
 <h2>Description: <%= @product.description %></h2>
 <h5>Last Update:<%= @product.friendly_updated_at %></h5>
